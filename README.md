@@ -46,7 +46,23 @@ We've put some test images of birds in the images directory, `imgs/`.
 To test some of them simply run from within this directory:
 
 ```python
-python runner.py imgs/bird_01.jpg
+python runner.py file://$PWD/imgs/bird_01.jpg
+```
+
+or using a url where a bird image has been stored:
+
+```python
+python runner.py 'https://i.imgur.com/8eGMhGP.jpg'
+```
+
+or with more than one image:
+
+```python
+python runner.py 'https://i.imgur.com/8eGMhGP.jpg', 
+'https://i.imgur.com/TRVxZAZ.jpg',
+'https://i.imgur.com/kBHq8Xt.jpg',
+'https://i.imgur.com/wmEaY0t.jpg',
+'https://i.imgur.com/olSQAGI.jpg'
 ```
 
 If you try running the `runner.py` without inserting any image, or comma separated images, you should get a warning.
@@ -64,6 +80,7 @@ python runner.py --help
 ## Supported OSs:
 - Ubuntu 18.04, 20.04 (ubuntu-latest).
 - MacOSX 10.15, 11.6.2 (macos-latest).
+- Windows 10.
 
 ## Known issues
 - Currently the library fails to work properly with python 3.6, 3.7, 3.8.
